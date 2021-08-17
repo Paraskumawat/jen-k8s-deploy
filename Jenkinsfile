@@ -14,7 +14,7 @@ pipeline{
         sh " kubectl apply -f deploy.yml --kubeconfig /admin.conf"
       }
     }
-    post{
+    Post{
       sucess{
         echo "Your job is sucess ......."
       }
