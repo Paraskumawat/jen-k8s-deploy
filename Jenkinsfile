@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Deploy'){
       steps{
-        sh " kubectl get pod --kubeconfig admin.conf"
+        sh " kubectl apply -f deploy.yml --kubeconfig /admin.conf"
       }
     }
   } 
