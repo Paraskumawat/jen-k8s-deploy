@@ -1,6 +1,6 @@
 pipeline{
   agent any
-  parasmeters{
+  parameters{
     booleanParam(name: 'DeployPod', defaultValue: true)
   }
   stages{
