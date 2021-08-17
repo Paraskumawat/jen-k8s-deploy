@@ -1,10 +1,13 @@
 pipeline{
   agent any
+  parasmeters{
+    booleanParam(name: 'DeployPod', defaultValue: 'true')
+  }
   stages{
     stage('Deploy'){
       when{
         expression{
-          false
+          params.DeployPod
         }
       }
       steps{
