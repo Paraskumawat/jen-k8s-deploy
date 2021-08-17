@@ -1,9 +1,9 @@
 pipeline{
   agent any
   stages{
-    stage(){
+    stage('Deploy'){
       steps{
-        echo "This is my testing data"
+        sh "kubectl apply -f deploy.yml --kubeconfig admin.conf"
       }
     }
   } 
